@@ -75,3 +75,4 @@ with mlflow.start_run():
     print(f"F1 Score: {f1}")
 
     print("Model dan metrik berhasil dicatat ke MLflow.")
+    # Tes Workflow GitHub Actions
