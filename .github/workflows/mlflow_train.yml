@@ -1,0 +1,30 @@
+name: Train MLflow Model
+
+on:
+  push:
+    paths:
+      - modelling.py
+      - requirements.txt
+      - .github/workflows/mlflow_train.yml
+
+jobs:
+  train-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Training Script
+        run: |
+          python modelling.py
