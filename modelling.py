@@ -28,8 +28,8 @@ mlflow.set_experiment("Prediksi_Karyawan_Resign")
 
 # 3. Muat data hasil preprocessing
 # Pastikan file ini berasal dari hasil preprocessing tahap 1
-X = pd.read_csv(r"C:\Users\ASUS\Downloads\Submission_MSML\membangun model\X_final.csv")
-y = pd.read_csv(r"C:\Users\ASUS\Downloads\Submission_MSML\membangun model\y_final.csv")
+X = pd.read_csv(r"X_final.csv")
+y = pd.read_csv(r"y_final.csv")
 
 # Jika y hanya 1 kolom, perlu dirapikan
 y = y.values.ravel()
